@@ -2,7 +2,9 @@ language: java
 jdk:
 - oraclejdk8
 script:
+- pwd
 - "./gradlew build"
+- pwd
 deploy:
   provider: releases
   api_key:
