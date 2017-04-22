@@ -6,6 +6,7 @@ install: true
 
 script:
 - "echo $TRAVIS_BUILD_DIR"
+- "ls"
 - "./gradlew build"
 deploy:
   provider: releases
