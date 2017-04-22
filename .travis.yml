@@ -7,6 +7,8 @@ install: true
 script:
 - "./gradlew build"
 - "echo $TRAVIS_BUILD_DIR"
+- "pwd"
+- "cd build/libs"
 - "ls"
 
 deploy:
