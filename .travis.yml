@@ -1,6 +1,12 @@
 language: java
 jdk:
-  - oraclejdk8
-
+- oraclejdk8
 script:
-    - ./gradlew build
+- "./gradlew build"
+deploy:
+  provider: releases
+  api_key:
+    secure: expCAShoh2qW/mQ1MZ3/eKkp/jdqjkmqpPirHIEym41/4yj19pDQjOK5W+beoPrqq/39u1zBiKJd0ljYJBbYNWuD2WcUJryC+39K8BMv64R+HdkPe2Ak0xbtfg4xGK1GdRQw5JLEpLmL9B0SswEurgWyQ129oAxY4OXhCOXIUny1EU5CfdSBMLUGfqNtFnPXaJFUmXSsB/U3i36+bZBbKCzOcr5i9l9M5VCaCEpedaiqACagRCia26/1Srb6ESoTv7TTMh1257P3oOR3Snga3Qzr06gYLS3/rz8RRir6Bu9GkRKfQyf6RRgReu3w5FLOQHB9rPF0WUK/S2m9HP0q4xjyXyUDT/E5cxPdh92ysS0xLzSQQSAOy6tTVja6EPVBs9nhnDzvuVq7ifOJuMd21JTRxv6RbkiBvpmwX1daraZ4tivT1bGuKIwhhzsV0oNWOvbPZi1RW6HRKhPV7nUyp1S7GaMh8T+BQPw4w0GAAaKHpTS2WDQiNJawjW6RlvS0eDyxdJxnFwXOD+g5XT8OwBYKy9lHIirNvPAwEXnVeJswAaLWg9xSdmrJnNmeR3Klcf4JEqoHxg9v9o2paAEzKAakOKK4WZebE4uRco2+6QJLMJ1hVLiGa4Ni+dYnggvNkrj01wfR+8k7UjcAuCwOnBWd2jiwSbHbuxnFZ0z6/yo=
+  file: build/springExample-0.0.1-SNAPSHOT.jar
+  on:
+    repo: filiprak/springExample
